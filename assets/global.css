@@ -1,0 +1,6 @@
+.container {
+  max-width: 1200px !important;
+}
+.v-rating button {
+  padding: 3px !important;
+}
