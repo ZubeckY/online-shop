@@ -4,3 +4,6 @@
 .v-rating button {
   padding: 3px !important;
 }
+.v-application--is-ltr .v-stepper__step__step {
+  display: none;
+}

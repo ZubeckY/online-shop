@@ -28,6 +28,7 @@
                 <v-range-slider v-model="range"
                                 hide-details
                                 class="align-center"
+                                track-color="#cfcfcf"
                                 :max="max" :min="min">
                 </v-range-slider>
                 <v-row>
@@ -62,6 +63,18 @@
         <div class="d-flex flex-row flex-wrap">
           <catalog-card v-for="i in 9" :key="i"></catalog-card>
         </div>
+
+
+          <div class="text-center">
+            <v-pagination v-model="page"
+                          :length="1"
+                          :total-visible="7"
+                          prev-icon="mdi-menu-left"
+                          next-icon="mdi-menu-right">
+            </v-pagination>
+          </div>
+
+
       </v-col>
     </v-row>
   </v-container>
@@ -71,6 +84,7 @@ import {Component, Vue} from "vue-property-decorator"
 
 @Component
 export default class Catalog extends Vue {
+  page:number = 1
   min:number = 100
   max:number = 10000
   range:number[] = [100, 10000]
