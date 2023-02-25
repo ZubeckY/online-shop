@@ -1,8 +1,9 @@
 <template>
   <v-app>
-    <div style="background: #f3f3f3">
+    <div style="background: #f3f3f3; min-height: 100vh;">
       <partials-header/>
       <nuxt/>
+      <partials-footer/>
     </div>
   </v-app>
 </template>

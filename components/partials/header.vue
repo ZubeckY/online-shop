@@ -10,11 +10,13 @@
                       append-icon="mdi-magnify"
                       dense outlined hide-details/>
 
-        <v-btn class="text--lighten-2" text>
+        <v-btn class="text--lighten-2" text
+               @click="routing('/favorite/')">
           <v-icon>mdi-heart-outline</v-icon>
         </v-btn>
 
-        <v-btn class="text--lighten-2" text>
+        <v-btn class="text--lighten-2" text
+               @click="routing('/chart/')">
           <v-icon>mdi-chart-box-outline</v-icon>
         </v-btn>
 
@@ -23,6 +25,7 @@
         </v-btn>
 
         <v-btn class="text--lighten-2" text
+               @click="routing('/cart/')"
                style="text-transform: none">
           <v-icon>mdi-cart-outline</v-icon>
           <div style="margin-left: 10px; font-size: 12px; color: #85e783">

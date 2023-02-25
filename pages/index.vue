@@ -56,24 +56,24 @@
     <v-form>
       <v-container>
         <clean-card>
-          <v-card-title class="pb-0">Всё ещё здесь?</v-card-title>
-          <v-card-text>Подпишись на рассылку и будь вкурсе всех новинок на сайте</v-card-text>
+          <clean-card class="mx-auto" style="max-width: 600px">
+            <v-card-title class="pb-0">Всё ещё здесь?</v-card-title>
+            <v-card-text>Подпишись на рассылку и будь вкурсе всех новинок на сайте</v-card-text>
 
-          <v-row class="ml-1">
-            <v-col cols="4">
+            <v-card-actions class="ml-1" style="margin-top: -30px;">
               <v-text-field dense outlined
+                            class="mt-6"
                             placeholder="Ваш email"/>
-            </v-col>
-            <v-col cols="2">
               <v-btn color="success"
-                     class="text--lighten-2"
+                     class="text--lighten-2 ml-6 mt-0"
                      style="text-transform: none">Отправить</v-btn>
-            </v-col>
-          </v-row>
+            </v-card-actions>
+
+            <v-card-text style="margin-top: -40px">При подписке на рассылку, дарим 10% скидки на следующую покупку</v-card-text>
+          </clean-card>
         </clean-card>
       </v-container>
     </v-form>
-
   </div>
 </template>
 <script lang="ts">
@@ -106,7 +106,3 @@ export default class Pages extends Vue {
 
 }
 </script>
-
-<style scoped>
-
-</style>

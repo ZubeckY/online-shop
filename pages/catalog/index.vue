@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <v-breadcrumbs :items="items" divider="-"></v-breadcrumbs>
-
     <v-row>
       <v-col cols="3">
         <clean-card>
@@ -118,6 +117,5 @@ export default class Catalog extends Vue {
       href: '/catalog',
     }
   ]
-
 }
 </script>
