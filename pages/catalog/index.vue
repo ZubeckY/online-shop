@@ -106,8 +106,7 @@ import {Component, Vue} from "vue-property-decorator"
 export default class Catalog extends Vue {
   page:number = 1
   pageCount:number = 2
-  itemsPerPage:number = 9
-
+  itemsPerPage:number = 12
 
   min:number = 100
   max:number = 10000
@@ -137,7 +136,6 @@ export default class Catalog extends Vue {
       text: 'Жидкое мыло', value: 'liquid_soap'
     }
   ]
-
   items = [
     {
       text: 'Главная',
