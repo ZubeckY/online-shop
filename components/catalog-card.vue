@@ -6,6 +6,13 @@
             max-width="250px"
             @click="routing(`/catalog/prop`)"
             style="margin: 0 15px 20px">
+
+      <v-card-actions style="min-height: 48px">
+        <v-spacer/>
+        <v-chip v-if="isHit">Хит</v-chip>
+        <v-chip v-if="isDiscount">Скидка</v-chip>
+      </v-card-actions>
+
       <div>
         <v-img max-height="150"
                max-width="250"
@@ -27,9 +34,10 @@
         </v-btn>
       </v-card-actions>
 
-      <v-card-actions>
+      <v-card-actions class="ma-0 px-0 pb-1">
         <v-card-title class="justify-center pa-0 pl-2">
-          1 000
+          <span :class="isDiscount ? 'text-decoration-line-through error--text pr-3' : ''">1 000</span>
+          <span v-if="isDiscount">990</span>
           <v-icon small>mdi-currency-rub</v-icon>
         </v-card-title>
         <v-spacer/>
@@ -47,6 +55,9 @@
 import {Component, Prop, Vue} from "vue-property-decorator"
 @Component
 export default class CustomCard extends Vue {
+  isHit:boolean = true
+  isDiscount:boolean = true
+
   routing (link:string) {
     this.$router.push(link)
   }

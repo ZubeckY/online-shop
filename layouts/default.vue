@@ -1,8 +1,12 @@
 <template>
   <v-app>
-    <div style="background: #f3f3f3; min-height: 100vh;">
+    <div class="d-flex flex-column" style="background: #f3f3f3; min-height: 100vh;">
       <partials-header/>
-      <nuxt/>
+
+      <div style="flex: 1 0 auto;">
+        <nuxt/>
+      </div>
+
       <partials-footer/>
     </div>
   </v-app>
